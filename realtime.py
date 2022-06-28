@@ -1,6 +1,6 @@
 import threading
-import rtmidi
 import musx
+import rtmidi
 import time
 import sys
 
@@ -49,10 +49,21 @@ def new_midi_callback(repeat, sustain, cutoff):
         thing.start()
 
 if __name__ == '__main__':  
+    # don't look at this code
+    # if len(sys.argv) < 1:
+    #     val1 = 3
+    #     val2 = 0.3
+    #     val3 = 0
+    # else:
+    #     val1 = sys.argv[1]
+    #     val2 = sys.argv[2]
+    #     val3 = sys.argv[3]
+    
     while True:
         # arugments:
         # (1) repeat -> positive integer (n > 0)
         # (2) sustain -> positive integer (n >= 0)
         # (3) cutoff -> positive integer (21 <= n <= 108)
-        new_midi_callback(int(sys.argv[1]), float(sys.argv[2]), int(sys.argv[3])) 
+        # ... or run realtime without any arguments!
+        new_midi_callback(int(3), float(0.3), int(0)) 
         pass
